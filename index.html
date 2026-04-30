@@ -4,24 +4,25 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>InstallMyAssistant | AI Architecting for Business Leaders</title>
-    <meta name="description" content="High-end AI automation systems for business leaders. Custom AI architecting from $6K. 24/7 operation, enterprise security, institutional-grade implementations.">
+    <meta name="description" content="High-end AI automation systems for business leaders. Consultation-led AI architecting, tailored workflows, personal assistant design, and enterprise-grade implementation.">
     <meta name="keywords" content="AI automation, business AI, enterprise AI, AI consulting, AI architecture, business automation, AI implementation">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://installmyassistant.ai/">
     <meta property="og:title" content="InstallMyAssistant | AI Architecting for Business Leaders">
-    <meta property="og:description" content="High-end AI automation systems for business leaders. Custom AI architecting from $6K. 24/7 operation, enterprise security.">
+    <meta property="og:description" content="High-end AI automation systems for business leaders. Consultation-led AI architecting, tailored workflows, and enterprise-grade implementation.">
     <meta property="og:image" content="https://installmyassistant.ai/og-image.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://installmyassistant.ai/">
     <meta property="twitter:title" content="InstallMyAssistant | AI Architecting for Business Leaders">
-    <meta property="twitter:description" content="High-end AI automation systems for business leaders. Custom AI architecting from $6K. 24/7 operation, enterprise security.">
+    <meta property="twitter:description" content="High-end AI automation systems for business leaders. Consultation-led AI architecting, tailored workflows, and enterprise-grade implementation.">
     <meta property="twitter:image" content="https://installmyassistant.ai/og-image.jpg">
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230a192f'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='20' fill='%23775A19'%3EI%3C/text%3E%3C/svg%3E">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
     <script id="tailwind-config">
@@ -103,10 +104,63 @@
         .section-fade {
             background: linear-gradient(180deg, #f8f9ff 0%, #ffffff 100%);
         }
+        .nav-arrow-hint {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255, 222, 165, 0.92);
+            white-space: nowrap;
+        }
+        .nav-arrow-hint .arrow-track {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.5rem;
+            overflow: hidden;
+        }
+        .nav-arrow-hint .arrow-icon {
+            animation: point-right 1.4s ease-in-out infinite;
+        }
+        .hero-cta-cue {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            color: rgba(255, 222, 165, 0.92);
+        }
+        .hero-cta-cue .cue-arrow {
+            animation: point-call 1.5s ease-in-out infinite;
+        }
+        @keyframes point-right {
+            0%, 100% {
+                transform: translateX(-0.15rem);
+                opacity: 0.65;
+            }
+            50% {
+                transform: translateX(0.45rem);
+                opacity: 1;
+            }
+        }
+        @keyframes point-call {
+            0%, 100% {
+                transform: translate(-0.1rem, -0.05rem);
+                opacity: 0.65;
+            }
+            50% {
+                transform: translate(0.25rem, 0.2rem);
+                opacity: 1;
+            }
+        }
         
         /* Mobile menu animations */
         #mobile-menu {
             transition: all 0.3s ease-in-out;
+        }
+
+        /* Keep the top bar from clipping in half-width desktop windows */
+        @media (max-width: 1200px) {
+            .nav-arrow-hint {
+                display: none;
+            }
         }
         
         /* Smooth scroll offset for fixed nav */
@@ -119,24 +173,29 @@
 
 <!-- Top Navigation -->
 <nav class="fixed top-0 w-full z-50 glass-nav border-b border-white/5">
-    <div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
-        <div class="text-xl font-black tracking-tighter text-white uppercase font-headline">
+    <div class="flex justify-between items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 md:grid md:grid-cols-[auto_1fr_auto] md:gap-6 lg:gap-10">
+        <div class="text-lg lg:text-xl font-black tracking-tighter text-white uppercase font-headline shrink-0 pr-3 lg:pr-4">
             InstallMyAssistant
         </div>
         
         <!-- Desktop Navigation -->
-        <div class="hidden md:flex items-center space-x-8 font-headline font-semibold tracking-tight">
+        <div class="hidden md:flex items-center justify-center gap-4 lg:gap-8 xl:gap-10 px-2 lg:px-6 font-headline font-semibold tracking-tight text-sm lg:text-base">
             <a class="text-white/80 hover:text-white transition-colors cursor-pointer" href="#services">Services</a>
-            <a class="text-white/80 hover:text-white transition-colors cursor-pointer" href="#pricing">Pricing</a>
-            <a class="text-white/80 hover:text-white transition-colors cursor-pointer" href="#subscriptions">Subscriptions</a>
+            <a class="text-white/80 hover:text-white transition-colors cursor-pointer" href="#consultation">Consultation</a>
+            <a class="text-white/80 hover:text-white transition-colors cursor-pointer" href="#process">Process</a>
             <a class="text-white/80 hover:text-white transition-colors cursor-pointer" href="#use-cases">Use Cases</a>
         </div>
         
         <!-- Desktop Buttons -->
-        <div class="hidden md:flex items-center space-x-4">
-            <button id="contact-sales-btn" class="text-white/80 hover:text-white font-headline font-semibold text-sm transition-all">Contact Sales</button>
-            <button id="get-started-btn" class="bg-secondary text-on-primary px-6 py-2.5 rounded shadow-lg hover:brightness-110 active:scale-95 transition-all duration-300 font-headline font-semibold">
-                Get Started
+        <div class="hidden md:flex items-center space-x-2 lg:space-x-4">
+            <div class="nav-arrow-hint font-headline font-semibold text-sm" aria-hidden="true">
+                <span>Start here</span>
+                <span class="arrow-track">
+                    <span class="material-symbols-outlined arrow-icon">arrow_forward</span>
+                </span>
+            </div>
+            <button id="get-started-btn" class="bg-secondary text-on-primary px-4 lg:px-6 py-2.5 rounded shadow-lg hover:brightness-110 active:scale-95 transition-all duration-300 font-headline font-semibold text-sm lg:text-base whitespace-nowrap">
+                Start With a Call
             </button>
         </div>
         
@@ -152,12 +211,11 @@
     <div id="mobile-menu" class="hidden md:hidden bg-primary/95 backdrop-blur-lg border-t border-white/10">
         <div class="px-8 py-6 space-y-4">
             <a href="#services" class="block py-3 text-white/80 hover:text-white transition-colors font-headline font-semibold">Services</a>
-            <a href="#pricing" class="block py-3 text-white/80 hover:text-white transition-colors font-headline font-semibold">Pricing</a>
-            <a href="#subscriptions" class="block py-3 text-white/80 hover:text-white transition-colors font-headline font-semibold">Subscriptions</a>
+            <a href="#consultation" class="block py-3 text-white/80 hover:text-white transition-colors font-headline font-semibold">Consultation</a>
+            <a href="#process" class="block py-3 text-white/80 hover:text-white transition-colors font-headline font-semibold">Process</a>
             <a href="#use-cases" class="block py-3 text-white/80 hover:text-white transition-colors font-headline font-semibold">Use Cases</a>
             <hr class="border-white/20 my-4">
-            <button id="mobile-contact-btn" class="block w-full text-left py-3 text-white/80 hover:text-white transition-colors font-headline font-semibold">Contact Sales</button>
-            <button id="mobile-get-started-btn" class="block w-full bg-secondary text-white py-3 px-4 rounded font-headline font-semibold mt-4">Get Started</button>
+            <button id="mobile-get-started-btn" class="block w-full bg-secondary text-white py-3 px-4 rounded font-headline font-semibold mt-4">Start With a Call</button>
         </div>
     </div>
 </nav>
@@ -175,25 +233,31 @@
                     AI Assistant Systems for <span class="text-secondary">Business Leaders</span>
                 </h1>
                 <p class="text-xl text-primary-fixed font-body leading-relaxed mb-12 max-w-xl opacity-90">
-                    We build custom AI automation systems that operate your core business functions 24/7. High-end architecting for firms that demand precision and security.
+                    We design tailored AI workflows and personal assistant systems around how your business actually runs. Start with a consultation call, align on your needs, and leave with a clear implementation path.
                 </p>
-                <div class="grid grid-cols-3 gap-4 sm:gap-8 mb-12">
+                <div class="grid grid-cols-3 gap-8 mb-12">
                     <div>
-                        <div class="text-2xl sm:text-3xl font-headline font-bold text-secondary-fixed">$12K+</div>
-                        <div class="text-[10px] sm:text-xs uppercase tracking-widest text-on-primary-container font-label mt-2">Avg Project</div>
+                        <div class="text-3xl font-headline font-bold text-secondary-fixed">Tailored</div>
+                        <div class="text-xs uppercase tracking-widest text-on-primary-container font-label mt-1">Workflow Design</div>
                     </div>
                     <div>
-                        <div class="text-2xl sm:text-3xl font-headline font-bold text-secondary-fixed">168hrs</div>
-                        <div class="text-[10px] sm:text-xs uppercase tracking-widest text-on-primary-container font-label mt-2">Implementation</div>
+                        <div class="text-3xl font-headline font-bold text-secondary-fixed">1:1</div>
+                        <div class="text-xs uppercase tracking-widest text-on-primary-container font-label mt-1">Consultation</div>
                     </div>
                     <div>
-                        <div class="text-2xl sm:text-3xl font-headline font-bold text-secondary-fixed">24/7</div>
-                        <div class="text-[10px] sm:text-xs uppercase tracking-widest text-on-primary-container font-label mt-2">Operation</div>
+                        <div class="text-3xl font-headline font-bold text-secondary-fixed">24/7</div>
+                        <div class="text-xs uppercase tracking-widest text-on-primary-container font-label mt-1">Assistant Support</div>
                     </div>
                 </div>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <button id="schedule-consultation-btn" class="bg-secondary text-white px-8 py-4 rounded font-headline font-bold text-lg hover:shadow-[0_0_20px_rgba(119,90,25,0.4)] transition-all">Schedule Consultation</button>
-                    <button id="view-architecture-btn" class="bg-white/5 backdrop-blur-md border border-white/20 px-8 py-4 rounded font-headline font-bold text-lg hover:bg-white/10 transition-all">View Architecture</button>
+                    <div class="w-full sm:w-auto flex justify-center sm:justify-start sm:items-center">
+                        <div class="hero-cta-cue font-headline font-semibold text-sm uppercase tracking-[0.14em]">
+                            <span>Book a consultation</span>
+                            <span class="material-symbols-outlined cue-arrow text-base">south_east</span>
+                        </div>
+                    </div>
+                    <button id="schedule-consultation-btn" class="bg-secondary text-white px-8 py-4 rounded font-headline font-bold text-lg hover:shadow-[0_0_20px_rgba(119,90,25,0.4)] transition-all">Start With a Call</button>
+                    <button id="view-architecture-btn" class="bg-white/5 backdrop-blur-md border border-white/20 px-8 py-4 rounded font-headline font-bold text-lg hover:bg-white/10 transition-all">See How We Build</button>
                 </div>
             </div>
             <div class="hidden lg:block relative">
@@ -239,40 +303,48 @@
     <section class="py-32 px-8 section-fade" id="services">
         <div class="max-w-7xl mx-auto">
             <div class="mb-20 max-w-2xl">
-                <h2 class="font-headline text-4xl md:text-5xl font-bold tracking-tight text-primary mb-6">Expert Solutions for Digital Sovereignty</h2>
-                <p class="text-lg text-on-surface-variant font-body">We don't just provide tools; we architect the operational backbone of your future enterprise.</p>
+                <h2 class="font-headline text-4xl md:text-5xl font-bold tracking-tight text-primary mb-6">Workflow Support Built Around How You Work</h2>
+                <p class="text-lg text-on-surface-variant font-body">From day-to-day executive support to revenue and reporting workflows, we design assistants that help your business move faster without creating more noise.</p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Cards remain the same as original -->
                 <div class="group bg-surface-container-lowest p-10 rounded-xl hover:bg-primary transition-all duration-500 shadow-sm border border-outline-variant/10 hover:shadow-2xl">
-                    <span class="material-symbols-outlined text-4xl text-secondary mb-8 block group-hover:text-secondary-fixed transition-colors">settings_input_component</span>
-                    <h3 class="font-headline text-2xl font-bold mb-4 text-primary group-hover:text-white">Business Process Automation</h3>
-                    <p class="text-on-surface-variant group-hover:text-primary-fixed opacity-90 leading-relaxed">End-to-end mapping and automation of legacy workflows into autonomous AI streams.</p>
+                    <span class="material-symbols-outlined text-4xl text-secondary mb-8 block group-hover:text-secondary-fixed transition-colors">calendar_month</span>
+                    <h3 class="font-headline text-2xl font-bold mb-4 text-primary group-hover:text-white">Daily Schedule Organization</h3>
+                    <p class="text-on-surface-variant group-hover:text-primary-fixed opacity-90 leading-relaxed">Keep your calendar, priorities, prep notes, reminders, and follow-ups organized so your day runs with less friction.</p>
                 </div>
                 <div class="group bg-surface-container-lowest p-10 rounded-xl hover:bg-primary transition-all duration-500 shadow-sm border border-outline-variant/10 hover:shadow-2xl">
-                    <span class="material-symbols-outlined text-4xl text-secondary mb-8 block group-hover:text-secondary-fixed transition-colors">psychology</span>
-                    <h3 class="font-headline text-2xl font-bold mb-4 text-primary group-hover:text-white">Executive Intelligence</h3>
-                    <p class="text-on-surface-variant group-hover:text-primary-fixed opacity-90 leading-relaxed">Real-time synthesis of global market data into boardroom-ready intelligence briefs.</p>
+                    <span class="material-symbols-outlined text-4xl text-secondary mb-8 block group-hover:text-secondary-fixed transition-colors">campaign</span>
+                    <h3 class="font-headline text-2xl font-bold mb-4 text-primary group-hover:text-white">Client Outreach</h3>
+                    <p class="text-on-surface-variant group-hover:text-primary-fixed opacity-90 leading-relaxed">Draft outreach, nurture follow-ups, coordinate meetings, and keep leads warm without losing your voice.</p>
                 </div>
                 <div class="group bg-surface-container-lowest p-10 rounded-xl hover:bg-primary transition-all duration-500 shadow-sm border border-outline-variant/10 hover:shadow-2xl">
-                    <span class="material-symbols-outlined text-4xl text-secondary mb-8 block group-hover:text-secondary-fixed transition-colors">verified_user</span>
-                    <h3 class="font-headline text-2xl font-bold mb-4 text-primary group-hover:text-white">Security & Compliance</h3>
-                    <p class="text-on-surface-variant group-hover:text-primary-fixed opacity-90 leading-relaxed">Hardened AI deployments meeting the most stringent institutional data privacy standards.</p>
+                    <span class="material-symbols-outlined text-4xl text-secondary mb-8 block group-hover:text-secondary-fixed transition-colors">edit_square</span>
+                    <h3 class="font-headline text-2xl font-bold mb-4 text-primary group-hover:text-white">Marketing Assistance</h3>
+                    <p class="text-on-surface-variant group-hover:text-primary-fixed opacity-90 leading-relaxed">Support content planning, campaign ideas, social drafts, launch checklists, and repurposing across channels.</p>
                 </div>
                 <div class="group bg-surface-container-lowest p-10 rounded-xl hover:bg-primary transition-all duration-500 shadow-sm border border-outline-variant/10 hover:shadow-2xl">
-                    <span class="material-symbols-outlined text-4xl text-secondary mb-8 block group-hover:text-secondary-fixed transition-colors">monitoring</span>
-                    <h3 class="font-headline text-2xl font-bold mb-4 text-primary group-hover:text-white">Monitoring</h3>
-                    <p class="text-on-surface-variant group-hover:text-primary-fixed opacity-90 leading-relaxed">Active oversight of AI performance with human-in-the-loop safety protocols.</p>
+                    <span class="material-symbols-outlined text-4xl text-secondary mb-8 block group-hover:text-secondary-fixed transition-colors">fact_check</span>
+                    <h3 class="font-headline text-2xl font-bold mb-4 text-primary group-hover:text-white">Audits & Report Creation</h3>
+                    <p class="text-on-surface-variant group-hover:text-primary-fixed opacity-90 leading-relaxed">Compile documentation, summarize findings, and generate polished reports for internal reviews and client-facing updates.</p>
                 </div>
                 <div class="group bg-surface-container-lowest p-10 rounded-xl hover:bg-primary transition-all duration-500 shadow-sm border border-outline-variant/10 hover:shadow-2xl">
-                    <span class="material-symbols-outlined text-4xl text-secondary mb-8 block group-hover:text-secondary-fixed transition-colors">hub</span>
-                    <h3 class="font-headline text-2xl font-bold mb-4 text-primary group-hover:text-white">Integrations</h3>
-                    <p class="text-on-surface-variant group-hover:text-primary-fixed opacity-90 leading-relaxed">Seamless bridging of AI layers with your existing ERP, CRM, and communication stacks.</p>
+                    <span class="material-symbols-outlined text-4xl text-secondary mb-8 block group-hover:text-secondary-fixed transition-colors">mark_email_read</span>
+                    <h3 class="font-headline text-2xl font-bold mb-4 text-primary group-hover:text-white">Inbox & Follow-Through</h3>
+                    <p class="text-on-surface-variant group-hover:text-primary-fixed opacity-90 leading-relaxed">Triage messages, surface priorities, draft replies, and keep important requests from slipping through the cracks.</p>
                 </div>
                 <div class="group bg-surface-container-lowest p-10 rounded-xl hover:bg-primary transition-all duration-500 shadow-sm border border-outline-variant/10 hover:shadow-2xl">
-                    <span class="material-symbols-outlined text-4xl text-secondary mb-8 block group-hover:text-secondary-fixed transition-colors">analytics</span>
-                    <h3 class="font-headline text-2xl font-bold mb-4 text-primary group-hover:text-white">Growth Analytics</h3>
-                    <p class="text-on-surface-variant group-hover:text-primary-fixed opacity-90 leading-relaxed">Predictive modeling that identifies revenue opportunities before they materialize.</p>
+                    <span class="material-symbols-outlined text-4xl text-secondary mb-8 block group-hover:text-secondary-fixed transition-colors">summarize</span>
+                    <h3 class="font-headline text-2xl font-bold mb-4 text-primary group-hover:text-white">Research & Briefing Support</h3>
+                    <p class="text-on-surface-variant group-hover:text-primary-fixed opacity-90 leading-relaxed">Pull together market research, meeting prep, decision briefs, and structured summaries you can actually use.</p>
+                </div>
+            </div>
+            <div class="mt-10 bg-primary text-white rounded-xl border border-white/10 px-8 py-7 shadow-xl flex flex-col md:flex-row md:items-center gap-5">
+                <div class="shrink-0">
+                    <span class="material-symbols-outlined text-secondary-fixed text-4xl">verified_user</span>
+                </div>
+                <div class="flex-1">
+                    <h3 class="font-headline text-2xl font-bold mb-2">Security & Compliance</h3>
+                    <p class="text-primary-fixed leading-relaxed">Security is part of the workflow design from the start. We build hardened assistant systems with careful permissions, privacy boundaries, and data-handling practices suited to sensitive business operations.</p>
                 </div>
             </div>
         </div>
@@ -281,176 +353,153 @@
     <!-- Use Cases / Bento -->
     <section class="py-32 px-8 bg-surface-container-low" id="use-cases">
         <div class="max-w-7xl mx-auto">
-            <h2 class="font-headline text-4xl font-bold text-center mb-16 text-primary">Institutional Applications</h2>
+            <div class="text-center mb-16">
+                <h2 class="font-headline text-4xl font-bold text-primary mb-4">Concrete Workflow Examples</h2>
+                <p class="text-on-surface-variant font-body max-w-3xl mx-auto">These are the kinds of systems we can shape during your consultation call, then tailor around your exact tools, communication style, and business goals.</p>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-6 gap-6 h-auto md:h-[600px]">
                 <div class="md:col-span-3 bg-primary rounded-xl overflow-hidden relative group">
                     <img class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1RpPuOc_R5U30tq6TLPmjyIvPf5s2-kqt_ujSy_oXNt2VNeeoGz8purlU_6w1ab8NhOpJGTV46gSIOo4o5-ropQCTKq2m--k7fQYVEo9K2BxdKOar_7C5_hjUoYhvuRD8r-XFd-Xuzx7ZIr5mKHrU_FPpuH3voSrVa2nM89fVo2mCFOuifBSLSBHuyI1tF4WhUNGLrnaJbX5UeJlyziP5X_0cVw8HsHq2Pz5CgehddK3gA7Bb1iAplVHdziDmXQgXstqm6DnpRP0" alt="modern manufacturing facility">
                     <div class="relative z-10 p-10 flex flex-col h-full justify-end bg-gradient-to-t from-primary/90 via-primary/40 to-transparent">
-                        <h4 class="text-white font-headline text-2xl font-bold mb-2">Manufacturing</h4>
-                        <p class="text-primary-fixed opacity-80">Supply chain optimization and autonomous logistics management.</p>
+                        <h4 class="text-white font-headline text-2xl font-bold mb-2">Executive Operating System</h4>
+                        <p class="text-primary-fixed opacity-80">Daily schedule management, meeting prep, reminders, briefing notes, and next-step tracking in one assistant workflow.</p>
                     </div>
                 </div>
                 <div class="md:col-span-3 bg-secondary rounded-xl overflow-hidden relative group">
                     <img class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL7MzrWvwvX8a40-tQZwqv3eF-iw-jb7lSdCPtSC0pzZ1n_Wh2R0Tze9JjdQziUvFweoWcr4Ujf74XfdV_42OQRUYUsRIDBngMOa7EVlVDdLaDyE0dSdzv_GG86g7qO4AWrM2jzXsEowNgXAhHi1tmHBZum88raK8w7jSBmyhiabYIDjD4jHzRxJoW3lqUdrNO3d64CmTzJWIVh4AJLI-xfPzOsS_gFZTUJ_A901wUm-4PM5MfK9DBgE2wV4P_exVwiml_Fnn7MLw" alt="modern office building">
                     <div class="relative z-10 p-10 flex flex-col h-full justify-end bg-gradient-to-t from-black/60 via-black/30 to-transparent">
-                        <h4 class="text-white font-headline text-2xl font-bold mb-2">Professional Services</h4>
-                        <p class="text-white/80">Hyper-efficient document synthesis and client reporting automation.</p>
+                        <h4 class="text-white font-headline text-2xl font-bold mb-2">Client Growth & Follow-Up</h4>
+                        <p class="text-white/80">Outreach drafts, proposal follow-up, lead nurturing, CRM hygiene, and client communication support without sounding robotic.</p>
                     </div>
                 </div>
-                <!-- Other use case cards remain the same -->
                 <div class="md:col-span-2 bg-tertiary rounded-xl overflow-hidden relative group">
-                    <img class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0YGyp80Al75LC9WfgGy1hmCJKLoGTkYO_WhvKWAEe947-NZSGleANrQM1Aek-Wva1rUpWg-xBEbB9rkuBNOzmsl7eAITc3eWiPw8iV5it08JkNUmycsIWRunW1aYE1QlOFDzDPhyFZ95Lajq0iBOAPBrl-VwuPnG98n5A7mw3vgEg1Ur5JguwxpxYOPMxBQvHH1bUCPWC9zqqwzWONBvHsCimXzywLcsu7HQNie_rqcyU0HzzLWl29XjSTi2BajyE2DCvGXSNizA" alt="fiber optic technology">
+                    <img class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-all duration-700" src="marketing-team.jpg" alt="marketing strategy team reviewing campaign plans">
                     <div class="relative z-10 p-8 flex flex-col h-full justify-end bg-gradient-to-t from-tertiary/90 via-tertiary/40 to-transparent">
-                        <h4 class="text-white font-headline text-xl font-bold mb-1">Tech</h4>
-                        <p class="text-tertiary-fixed text-sm">Automated DevOps and AI-led engineering.</p>
+                        <h4 class="text-white font-headline text-xl font-bold mb-1">Marketing Support</h4>
+                        <p class="text-tertiary-fixed text-sm">Campaign planning, content drafting, repurposing, and launch coordination.</p>
                     </div>
                 </div>
                 <div class="md:col-span-2 bg-primary rounded-xl overflow-hidden relative group">
-                    <img class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIyqjVXP53FOopzWHevBQSiv5ptIDhncQTCg2GSOlpx1HjqBzsHyXI6BVnV_p4ShtbeD2Iai5ylM5qkFpN6G8XkWTpx6eIs0U9BlLpdqrQB4t_XAF9iLnRBFae-dHPuV2w_dQN38jIRXC_nEirDcGHpEvx-w_fQXJFdtVYxj4aFlizQLpVrHKkauT3JkkfJdrciZcmvfiWHHIAZHH6uUrP2S75wynCvoiYR-bV71NdZvOiQbV_G-tdQKWSrwwnAMw2CFL-Hf2YteM" alt="luxury retail store">
+                    <img class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-all duration-700" src="audit-reports.jpg" alt="audit documents and financial report review">
                     <div class="relative z-10 p-8 flex flex-col h-full justify-end bg-gradient-to-t from-primary/90 via-primary/40 to-transparent">
-                        <h4 class="text-white font-headline text-xl font-bold mb-1">Retail</h4>
-                        <p class="text-primary-fixed text-sm">Predictive inventory and customer behavior modeling.</p>
+                        <h4 class="text-white font-headline text-xl font-bold mb-1">Audits & Reporting</h4>
+                        <p class="text-primary-fixed text-sm">Compile source materials, organize findings, and produce cleaner internal or client-facing reports.</p>
                     </div>
                 </div>
                 <div class="md:col-span-2 bg-primary-container rounded-xl overflow-hidden relative group">
                     <img class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdZ8PQn7nn1vnZ_02c3vjG1mA55PaASimvMo0XzpEpR81WSp6_kbKeG0Bh-SLMBLpCpavw_LTiNJ2fSTTBLeVFDhHGORS4dB4vGZx5g2urlXL3zjFdsqBgCJQEaAAF0EOn_nwow6g_jTa5c0HAH1m11L7ZJSNqNFWFNeDuYF6MrgnXfikY8wHogJtULdmP4qyiZIfP3hxMlNAzoRNawYDX8NzwvTuYBTO_-qKsWhe7LF1D08wxVr0zt289g0MS2oIgNOeh5fhmEOg" alt="modern hospital">
                     <div class="relative z-10 p-8 flex flex-col h-full justify-end bg-gradient-to-t from-primary-container/90 via-primary-container/40 to-transparent">
-                        <h4 class="text-white font-headline text-xl font-bold mb-1">Healthcare</h4>
-                        <p class="text-primary-fixed text-sm">Secure data handling and diagnostic support AI.</p>
+                        <h4 class="text-white font-headline text-xl font-bold mb-1">Research & Admin Support</h4>
+                        <p class="text-primary-fixed text-sm">Research summaries, inbox triage, task routing, and structured follow-through.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section class="py-32 px-8 section-fade" id="pricing">
+    <!-- Consultation Section -->
+    <section class="py-32 px-8 section-fade" id="consultation">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-20">
-                <h2 class="font-headline text-4xl font-bold text-primary mb-4">Implementation Investment</h2>
-                <p class="text-on-surface-variant font-body">Custom architecture designed for your specific infrastructure.</p>
+                <h2 class="font-headline text-4xl font-bold text-primary mb-4">Start With a Consultation Call</h2>
+                <p class="text-on-surface-variant font-body">We start by understanding your business, current workflows, and where a personal assistant or automation layer can create the biggest leverage.</p>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Professional -->
                 <div class="p-10 bg-white rounded-xl border border-outline-variant/10 shadow-sm flex flex-col hover:shadow-xl transition-all">
-                    <h3 class="font-headline text-xl font-bold text-on-surface mb-2">Professional</h3>
+                    <h3 class="font-headline text-xl font-bold text-on-surface mb-2">Business Discovery Call</h3>
                     <div class="mb-8">
-                        <span class="text-4xl font-bold text-primary">$6,000</span>
-                        <span class="text-on-surface-variant text-sm font-label">/ SETUP</span>
+                        <span class="text-2xl font-bold text-primary">Clarify your operational priorities</span>
                     </div>
                     <ul class="space-y-4 mb-10 flex-grow">
                         <li class="flex items-start gap-3 text-sm">
                             <span class="material-symbols-outlined text-secondary text-lg">check_circle</span>
-                            <span>Single Core Process Automation</span>
+                            <span>Review your current business processes and bottlenecks</span>
                         </li>
                         <li class="flex items-start gap-3 text-sm">
                             <span class="material-symbols-outlined text-secondary text-lg">check_circle</span>
-                            <span>Integration with 3 Main Platforms</span>
+                            <span>Identify where AI assistants can save the most time first</span>
                         </li>
                         <li class="flex items-start gap-3 text-sm">
                             <span class="material-symbols-outlined text-secondary text-lg">check_circle</span>
-                            <span>2-Week Implementation Window</span>
+                            <span>Align the buildout to your team, tools, and goals</span>
                         </li>
                     </ul>
-                    <button class="pricing-btn w-full py-3 rounded border-2 border-primary font-bold text-primary hover:bg-primary hover:text-white transition-all" data-tier="Professional">Select Tier</button>
                 </div>
 
-                <!-- Enterprise - Featured -->
                 <div class="p-10 bg-primary rounded-xl border-t-4 border-secondary shadow-2xl flex flex-col relative transform lg:scale-105 z-10">
-                    <div class="absolute top-0 right-10 -translate-y-1/2 bg-secondary text-white px-4 py-1 text-xs font-bold uppercase tracking-widest rounded">Most Popular</div>
-                    <h3 class="font-headline text-xl font-bold text-white mb-2">Enterprise</h3>
+                    <h3 class="font-headline text-xl font-bold text-white mb-2">Workflow Architecture Review</h3>
                     <div class="mb-8">
-                        <span class="text-4xl font-bold text-secondary-fixed">$12,000</span>
-                        <span class="text-primary-fixed-dim text-sm font-label">/ SETUP</span>
+                        <span class="text-2xl font-bold text-secondary-fixed">Map the right assistant system before building</span>
                     </div>
                     <ul class="space-y-4 mb-10 flex-grow">
                         <li class="flex items-start gap-3 text-sm text-white">
                             <span class="material-symbols-outlined text-secondary-fixed text-lg">check_circle</span>
-                            <span>Full-Stack Departmental Automation</span>
+                            <span>Discuss the exact workflows your assistant should own</span>
                         </li>
                         <li class="flex items-start gap-3 text-sm text-white">
                             <span class="material-symbols-outlined text-secondary-fixed text-lg">check_circle</span>
-                            <span>Custom Intelligence Dashboard</span>
+                            <span>Review integrations, security expectations, and operating style</span>
                         </li>
                         <li class="flex items-start gap-3 text-sm text-white">
                             <span class="material-symbols-outlined text-secondary-fixed text-lg">check_circle</span>
-                            <span>Enhanced Security Protocols</span>
+                            <span>Shape a tailored workflow plan for your business and personal assistant</span>
                         </li>
                         <li class="flex items-start gap-3 text-sm text-white font-semibold">
                             <span class="material-symbols-outlined text-secondary-fixed text-lg">check_circle</span>
-                            <span>White-Glove Support</span>
+                            <span>Leave with a clear next-step implementation path</span>
                         </li>
                     </ul>
-                    <button class="pricing-btn w-full py-4 rounded bg-secondary text-white font-bold text-lg shadow-xl hover:brightness-110 hover:shadow-secondary/20 transition-all" data-tier="Enterprise">Get Started</button>
+                    <button class="consultation-btn w-full py-4 rounded bg-secondary text-white font-bold text-lg shadow-xl hover:brightness-110 hover:shadow-secondary/20 transition-all" data-focus="Workflow Architecture">Book Your Call</button>
                 </div>
 
-                <!-- Institutional -->
                 <div class="p-10 bg-white rounded-xl border border-outline-variant/10 shadow-sm flex flex-col hover:shadow-xl transition-all">
-                    <h3 class="font-headline text-xl font-bold text-on-surface mb-2">Institutional</h3>
+                    <h3 class="font-headline text-xl font-bold text-on-surface mb-2">Executive Assistant Buildout Plan</h3>
                     <div class="mb-8">
-                        <span class="text-4xl font-bold text-primary">$25K+</span>
-                        <span class="text-on-surface-variant text-sm font-label">/ SETUP</span>
+                        <span class="text-2xl font-bold text-primary">Design around your leadership rhythm</span>
                     </div>
                     <ul class="space-y-4 mb-10 flex-grow">
                         <li class="flex items-start gap-3 text-sm">
                             <span class="material-symbols-outlined text-secondary text-lg">check_circle</span>
-                            <span>Whole-Firm AI Infrastructure</span>
+                            <span>Explore how an AI assistant can support you personally and operationally</span>
                         </li>
                         <li class="flex items-start gap-3 text-sm">
                             <span class="material-symbols-outlined text-secondary text-lg">check_circle</span>
-                            <span>Proprietary Large Language Models</span>
+                            <span>Plan communications, research, scheduling, and follow-through systems</span>
                         </li>
                         <li class="flex items-start gap-3 text-sm">
                             <span class="material-symbols-outlined text-secondary text-lg">check_circle</span>
-                            <span>Full ERP/Legacy Integration</span>
+                            <span>Tailor the workflow to your business needs and personal operating style</span>
                         </li>
                     </ul>
-                    <button class="pricing-btn w-full py-3 rounded border-2 border-primary font-bold text-primary hover:bg-primary hover:text-white transition-all" data-tier="Institutional">Contact for Quote</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Subscription Section -->
-    <section class="py-32 px-8 bg-surface-container-low" id="subscriptions">
+    <!-- Process Section -->
+    <section class="py-32 px-8 bg-surface-container-low" id="process">
         <div class="max-w-7xl mx-auto">
             <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
                 <div>
-                    <h2 class="font-headline text-4xl font-bold text-primary mb-4">Ongoing Stewardship</h2>
-                    <p class="text-on-surface-variant font-body">Ensuring your systems evolve as fast as the AI landscape.</p>
-                </div>
-                <div class="bg-surface-container-highest p-2 rounded-lg flex gap-2">
-                    <button id="monthly-btn" class="px-6 py-2 bg-white shadow-sm rounded font-bold text-sm">Monthly</button>
-                    <button id="yearly-btn" class="px-6 py-2 rounded font-bold text-sm text-on-surface-variant">Yearly (Save 20%)</button>
+                    <h2 class="font-headline text-4xl font-bold text-primary mb-4">How the Engagement Works</h2>
+                    <p class="text-on-surface-variant font-body">No fixed pricing table. Every build starts with a conversation and is shaped around the systems you actually need.</p>
                 </div>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-white p-8 rounded-xl shadow-sm border border-outline-variant/5 hover:shadow-md transition-shadow">
-                    <h4 class="font-headline font-bold mb-4 uppercase tracking-widest text-xs text-secondary">Essential</h4>
-                    <div class="text-3xl font-bold mb-6 text-primary">$500<span class="text-sm text-on-surface-variant">/mo</span></div>
-                    <p class="text-sm text-on-surface-variant mb-6">Uptime monitoring and security patch management.</p>
-                    <hr class="border-outline-variant/20 mb-6">
-                    <button class="subscription-btn text-secondary font-bold text-sm flex items-center gap-2 group" data-plan="Essential">
-                        Learn more <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                    </button>
+                    <h4 class="font-headline font-bold mb-4 uppercase tracking-widest text-xs text-secondary">Step 1</h4>
+                    <div class="text-3xl font-bold mb-6 text-primary">Consult</div>
+                    <p class="text-sm text-on-surface-variant mb-6">We talk through your business model, team constraints, priorities, and the outcomes you want your assistant to own.</p>
                 </div>
                 <div class="bg-white p-8 rounded-xl shadow-sm border border-outline-variant/5 ring-2 ring-primary hover:shadow-lg transition-shadow">
-                    <h4 class="font-headline font-bold mb-4 uppercase tracking-widest text-xs text-secondary">Professional</h4>
-                    <div class="text-3xl font-bold mb-6 text-primary">$1,500<span class="text-sm text-on-surface-variant">/mo</span></div>
-                    <p class="text-sm text-on-surface-variant mb-6">Bi-weekly efficiency audits and model refinement.</p>
-                    <hr class="border-outline-variant/20 mb-6">
-                    <button class="subscription-btn text-secondary font-bold text-sm flex items-center gap-2 group" data-plan="Professional">
-                        Learn more <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                    </button>
+                    <h4 class="font-headline font-bold mb-4 uppercase tracking-widest text-xs text-secondary">Step 2</h4>
+                    <div class="text-3xl font-bold mb-6 text-primary">Architect</div>
+                    <p class="text-sm text-on-surface-variant mb-6">We map the workflow, tools, security boundaries, and communication rules for your tailored assistant system.</p>
                 </div>
                 <div class="bg-white p-8 rounded-xl shadow-sm border border-outline-variant/5 hover:shadow-md transition-shadow">
-                    <h4 class="font-headline font-bold mb-4 uppercase tracking-widest text-xs text-secondary">Premium</h4>
-                    <div class="text-3xl font-bold mb-6 text-primary">$2,500<span class="text-sm text-on-surface-variant">/mo</span></div>
-                    <p class="text-sm text-on-surface-variant mb-6">On-call engineering and priority feature rollout.</p>
-                    <hr class="border-outline-variant/20 mb-6">
-                    <button class="subscription-btn text-secondary font-bold text-sm flex items-center gap-2 group" data-plan="Premium">
-                        Learn more <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                    </button>
+                    <h4 class="font-headline font-bold mb-4 uppercase tracking-widest text-xs text-secondary">Step 3</h4>
+                    <div class="text-3xl font-bold mb-6 text-primary">Implement</div>
+                    <p class="text-sm text-on-surface-variant mb-6">Once the plan is right, we build and refine an assistant experience tailored to your business needs and operating style.</p>
                 </div>
             </div>
         </div>
@@ -461,13 +510,13 @@
         <div class="max-w-7xl mx-auto hero-gradient rounded-2xl p-16 relative overflow-hidden text-center shadow-2xl">
             <div class="absolute top-0 right-0 w-64 h-64 bg-secondary/10 blur-[100px] rounded-full"></div>
             <div class="absolute bottom-0 left-0 w-96 h-96 bg-tertiary/20 blur-[120px] rounded-full"></div>
-            <h2 class="font-headline text-4xl md:text-5xl font-bold text-white mb-8 relative z-10">Ready to build your <span class="text-secondary">AI Legacy</span>?</h2>
-            <p class="text-xl text-primary-fixed mb-12 max-w-2xl mx-auto relative z-10">Connect with Andrea to begin your firm's transformation into an autonomous powerhouse.</p>
+            <h2 class="font-headline text-4xl md:text-5xl font-bold text-white mb-8 relative z-10">Ready to design your <span class="text-secondary">tailored assistant system</span>?</h2>
+            <p class="text-xl text-primary-fixed mb-12 max-w-2xl mx-auto relative z-10">Connect with Andrea for a consultation call to discuss your business needs, shape the right workflow, and define the assistant experience that fits you best.</p>
             <div class="flex flex-col items-center relative z-10">
                 <button id="final-cta-btn" class="bg-secondary text-white px-10 py-5 rounded-lg font-headline font-bold text-xl hover:brightness-110 hover:scale-105 transition-all shadow-xl">
-                    Contact Andrea
+                    Book a Consultation Call
                 </button>
-                <p class="text-primary-fixed/60 text-sm mt-4">andrea@installmyassistant.ai</p>
+                <p class="text-primary-fixed/60 text-sm mt-4">Choose a time on the calendar or reach out directly at andrea@installmyassistant.ai</p>
             </div>
         </div>
     </section>
@@ -483,11 +532,11 @@
             </p>
         </div>
         <div>
-            <h5 class="text-white font-headline font-semibold mb-4">Solutions</h5>
+            <h5 class="text-white font-headline font-semibold mb-4">Use Cases</h5>
             <ul class="space-y-3 font-body text-sm">
-                <li><a class="text-slate-400 hover:text-[#775A19] hover:translate-x-1 transition-transform inline-block" href="#services">Process Mapping</a></li>
-                <li><a class="text-slate-400 hover:text-[#775A19] hover:translate-x-1 transition-transform inline-block" href="#services">Security First AI</a></li>
-                <li><a class="text-slate-400 hover:text-[#775A19] hover:translate-x-1 transition-transform inline-block" href="#services">Custom LLMs</a></li>
+                <li><a class="text-slate-400 hover:text-[#775A19] hover:translate-x-1 transition-transform inline-block" href="#use-cases">Executive Operating System</a></li>
+                <li><a class="text-slate-400 hover:text-[#775A19] hover:translate-x-1 transition-transform inline-block" href="#use-cases">Client Growth & Follow-Up</a></li>
+                <li><a class="text-slate-400 hover:text-[#775A19] hover:translate-x-1 transition-transform inline-block" href="#use-cases">Research & Admin Support</a></li>
             </ul>
         </div>
         <div>
@@ -507,29 +556,37 @@
         </div>
     </div>
     <div class="max-w-7xl mx-auto px-8 pt-12 mt-12 border-t border-white/5 text-center md:text-left">
-        <p class="text-slate-500 font-body text-xs">© 2024 INSTALLMYASSISTANT LLC. High-End AI Architecting. All rights reserved.</p>
+        <p class="text-slate-500 font-body text-xs">© 2025 INSTALLMYASSISTANT LLC. High-End AI Architecting. All rights reserved.</p>
     </div>
 </footer>
 
 <!-- Contact Modal -->
 <div id="contact-modal" class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
     <div class="bg-white rounded-xl p-8 max-w-md w-full shadow-2xl">
-        <h3 class="font-headline text-2xl font-bold text-primary mb-4">Get In Touch</h3>
-        <p class="text-on-surface-variant mb-6">Ready to transform your business with AI? Let's discuss your specific needs.</p>
+        <h3 class="font-headline text-2xl font-bold text-primary mb-4">Book a Consultation Call</h3>
+        <p class="text-on-surface-variant mb-6">Tell Andrea about your business needs, your current workflows, and the kind of personal assistant support you want to build.</p>
         <div class="space-y-4">
-            <a href="mailto:andrea@installmyassistant.ai?subject=AI%20Assistant%20Implementation%20Inquiry" class="flex items-center gap-3 p-4 bg-primary/5 rounded-lg hover:bg-primary/10 transition-all group">
+            <a id="calendly-booking-link" href="https://calendly.com/andrea-installmyassistant/consultation-call" target="_blank" rel="noreferrer" class="flex items-center gap-3 p-4 bg-secondary text-white rounded-lg hover:brightness-110 transition-all group">
+                <span class="material-symbols-outlined text-white">event_available</span>
+                <div>
+                    <div class="font-semibold text-white">Book on Calendly</div>
+                    <div class="text-sm text-white/80">Choose a time that works for you</div>
+                </div>
+                <span class="material-symbols-outlined text-white ml-auto group-hover:translate-x-1 transition-transform">open_in_new</span>
+            </a>
+            <a href="mailto:andrea@installmyassistant.ai?subject=Consultation%20Call%20Request%20for%20InstallMyAssistant" class="flex items-center gap-3 p-4 bg-primary/5 rounded-lg hover:bg-primary/10 transition-all group">
                 <span class="material-symbols-outlined text-primary">email</span>
                 <div>
-                    <div class="font-semibold text-primary">Email</div>
-                    <div class="text-sm text-on-surface-variant">andrea@installmyassistant.ai</div>
+                    <div class="font-semibold text-primary">Request by Email</div>
+                    <div class="text-sm text-on-surface-variant">Share your goals and request a consultation call</div>
                 </div>
                 <span class="material-symbols-outlined text-primary ml-auto group-hover:translate-x-1 transition-transform">arrow_forward</span>
             </a>
             <a href="https://linkedin.com/in/theandrealee" target="_blank" class="flex items-center gap-3 p-4 bg-secondary/5 rounded-lg hover:bg-secondary/10 transition-all group">
                 <span class="material-symbols-outlined text-secondary">person</span>
                 <div>
-                    <div class="font-semibold text-secondary">LinkedIn</div>
-                    <div class="text-sm text-on-surface-variant">Connect professionally</div>
+                    <div class="font-semibold text-secondary">Connect on LinkedIn</div>
+                    <div class="text-sm text-on-surface-variant">Start the conversation and coordinate a call</div>
                 </div>
                 <span class="material-symbols-outlined text-secondary ml-auto group-hover:translate-x-1 transition-transform">arrow_forward</span>
             </a>
@@ -543,6 +600,8 @@
 <!-- JavaScript -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+    const calendlyUrl = 'https://calendly.com/andrea-installmyassistant/consultation-call';
+
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -566,6 +625,16 @@ document.addEventListener('DOMContentLoaded', function() {
         mobileMenu.classList.toggle('hidden');
     });
 
+    // Calendly link setup
+    const calendlyAnchor = document.getElementById('calendly-booking-link');
+    if (calendlyAnchor) {
+        calendlyAnchor.href = calendlyUrl;
+    }
+
+    function openCalendly() {
+        window.open(calendlyUrl, '_blank', 'noopener,noreferrer');
+    }
+
     // Modal functionality
     const modal = document.getElementById('contact-modal');
     const closeModal = document.getElementById('close-modal');
@@ -582,9 +651,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Contact buttons
     const contactButtons = [
-        'contact-sales-btn',
         'get-started-btn', 
-        'mobile-contact-btn',
         'mobile-get-started-btn',
         'schedule-consultation-btn',
         'final-cta-btn'
@@ -593,32 +660,22 @@ document.addEventListener('DOMContentLoaded', function() {
     contactButtons.forEach(id => {
         const element = document.getElementById(id);
         if (element) {
-            element.addEventListener('click', showContactModal);
+            element.addEventListener('click', openCalendly);
         }
     });
     
     // View Architecture button
     document.getElementById('view-architecture-btn')?.addEventListener('click', function() {
-        document.querySelector('#services').scrollIntoView({ 
+        document.querySelector('#process').scrollIntoView({
             behavior: 'smooth',
             block: 'start'
         });
     });
     
-    // Pricing buttons
-    document.querySelectorAll('.pricing-btn').forEach(btn => {
+    // Consultation buttons
+    document.querySelectorAll('.consultation-btn').forEach(btn => {
         btn.addEventListener('click', function() {
-            const tier = this.dataset.tier;
-            // You could customize the modal content based on tier
-            showContactModal();
-        });
-    });
-    
-    // Subscription buttons
-    document.querySelectorAll('.subscription-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            const plan = this.dataset.plan;
-            showContactModal();
+            openCalendly();
         });
     });
     
@@ -639,28 +696,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Subscription toggle
-    const monthlyBtn = document.getElementById('monthly-btn');
-    const yearlyBtn = document.getElementById('yearly-btn');
-    
-    yearlyBtn?.addEventListener('click', function() {
-        monthlyBtn.classList.remove('bg-white', 'shadow-sm');
-        monthlyBtn.classList.add('text-on-surface-variant');
-        yearlyBtn.classList.add('bg-white', 'shadow-sm');
-        yearlyBtn.classList.remove('text-on-surface-variant');
-        
-        // Update pricing (you could implement actual price changes here)
-        console.log('Switched to yearly pricing');
-    });
-    
-    monthlyBtn?.addEventListener('click', function() {
-        yearlyBtn.classList.remove('bg-white', 'shadow-sm');
-        yearlyBtn.classList.add('text-on-surface-variant');
-        monthlyBtn.classList.add('bg-white', 'shadow-sm');
-        monthlyBtn.classList.remove('text-on-surface-variant');
-        
-        console.log('Switched to monthly pricing');
-    });
 });
 
 // Global function for modal (used by footer links)
